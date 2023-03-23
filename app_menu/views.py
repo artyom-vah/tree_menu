@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Menu
+from app_menu.models import MenuItem
 
 
 def draw_menu(request, menu_name):
-    menu = Menu.objects.get(name=menu_name)
-    return render(request, 'app_menu/menu.html', {'menu': menu})
+    menu_items = MenuItem.objects.filter(name=menu_name).select_related('parent')
+    return render(request, 'app_menu/menu.html', {'menu_items': menu_items})

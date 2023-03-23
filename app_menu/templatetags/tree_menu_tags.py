@@ -1,31 +1,27 @@
 from django import template
-from app_menu.models import Menu
+from app_menu.models import MenuItem
 
 register = template.Library()
 
 
-@register.simple_tag(takes_context=True)
-def draw_menu(context, menu_name):
-    '''Отображает(рендерит) меню с указанным названием.'''
-    try:
-        menu = Menu.objects.get(name=menu_name)
-    except Menu.DoesNotExist:
-        return ''
+@register.simple_tag
+def draw_menu(menu_name):
+    menu_items = MenuItem.objects.filter(name=menu_name).select_related('parent')
+    return _render_menu(menu_items)
 
-    request = context['request']
-    current_path = request.path
 
-    def is_active(item):
-        return current_path.startswith(item.url)
-
-    def draw_item(item):
-        return template.Template('{% include "app_menu/menu_item.html" %}').render({
-            'item': item,
-            'is_active': is_active(item),
-            'draw_item': draw_item,
-        })
-
-    return template.Template('{% include "app_menu/menu.html" %}').render({
-        'menu': menu,
-        'draw_item': draw_item,
-    })
+def _render_menu(menu_items):
+    menu_html = '<ul>'
+    for item in menu_items:
+        menu_html += '<li>'
+        if item.url:
+            menu_html += f'<a href="{item.url}">{item.name}</a>'
+        elif item.named_url:
+            menu_html += f'<a href="{item.named_url}">{item.name}</a>'
+        else:
+            menu_html += item.name
+        if item.children.exists():
+            menu_html += _render_menu(item.children.all())
+        menu_html += '</li>'
+    menu_html += '</ul>'
+    return menu_html
