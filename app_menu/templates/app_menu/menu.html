@@ -1,0 +1,12 @@
+{% load tree_menu_tags %}
+<ul>
+    {{ menu }}
+    {% for item in menu.items.all %}
+        {% if not item.parent %}
+        {% draw_menu name %}
+             <ul><li>{{ item }}</li></ul>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<!--{% draw_menu 'menu_name' %}-->
