@@ -82,11 +82,12 @@ main_menu
         подопция_3.3
             подопция_3.3(1)
 ```
+
 **Пример готового проекта**
-***админка:***
+***Админка:***
 ![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_1.jpg)
 ![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_2.jpg)
 ![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg)
 
-***вывод в браузер:***
-![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg)
+***Вывод в браузер:***
+![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/brows.jpg)
