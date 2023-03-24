@@ -83,4 +83,10 @@ main_menu
             подопция_3.3(1)
 ```
 **Пример готового проекта**
-<img src = 'https://disk.yandex.ru/client/disk/tree_menu_img/img_1.jpg'
+***админка:***
+![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_1.jpg)
+![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_2.jpg)
+![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg)
+
+***вывод в браузер:***
+![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg)
