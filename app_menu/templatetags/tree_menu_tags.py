@@ -1,5 +1,8 @@
 from django import template
 from app_menu.models import MenuItem
+from bs4 import BeautifulSoup
+from django.utils.safestring import mark_safe
+
 
 register = template.Library()
 
@@ -7,7 +10,7 @@ register = template.Library()
 @register.simple_tag
 def draw_menu(menu_name):
     menu_items = MenuItem.objects.filter(name=menu_name).select_related('parent')
-    return _render_menu(menu_items)
+    return mark_safe(_render_menu(menu_items))
 
 
 def _render_menu(menu_items):
@@ -24,4 +27,7 @@ def _render_menu(menu_items):
             menu_html += _render_menu(item.children.all())
         menu_html += '</li>'
     menu_html += '</ul>'
-    return menu_html
+    # res_menu = BeautifulSoup(menu_html, 'html.parser')    
+    return menu_html #res_menu
+
+

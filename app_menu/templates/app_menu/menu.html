@@ -1,36 +1,16 @@
+
 {% load tree_menu_tags %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Меню</title>
+
 </head>
 <body>
 
-
-
+{% comment %} тут может быть любое название главного меню {% endcomment %}
 {% draw_menu 'main_menu' %}
-
-
-<!--{% if menu_items %}-->
-<!--    <ul>-->
-<!--        {% for item in menu_items %}-->
-<!--            <li>-->
-<!--                {% if item.url %}-->
-<!--                    <a href="{{ item.url }}">{{ item.name }}</a>-->
-<!--                {% elif item.named_url %}-->
-<!--                    <a href="{% url item.named_url %}">{{ item.name }}</a>-->
-<!--                {% else %}-->
-<!--                    {{ item.name }}-->
-<!--                {% endif %}-->
-<!--                {% if item.children.all %}-->
-<!--                    {% draw_menu item.name %}-->
-<!--                {% endif %}-->
-<!--            </li>-->
-<!--        {% endfor %}-->
-<!--    </ul>-->
-<!--{% endif %}-->
-
 
 </body>
 </html>
