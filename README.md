@@ -90,5 +90,5 @@ main_menu
 <img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg" alt="Описание картинки" width="900"/>
 
 ***Вывод в браузер:***
-<img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/brows.jpg" alt="Описание картинки" width="900"/>
+<img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/brows.jpg" alt="Описание картинки" width="400"/>
 
