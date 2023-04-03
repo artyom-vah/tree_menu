@@ -88,9 +88,7 @@ main_menu
 <img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_1.jpg" alt="Описание картинки" width="900"/>
 <img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_2.jpg" alt="Описание картинки" width="900"/>
 <img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg" alt="Описание картинки" width="900"/>
-![скрин]()
-![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_2.jpg)
-![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/admin_3.jpg)
 
 ***Вывод в браузер:***
-![скрин](https://github.com/artyom-vah/tree_menu/blob/main/imgs/brows.jpg)
+<img src="https://github.com/artyom-vah/tree_menu/blob/main/imgs/brows.jpg" alt="Описание картинки" width="900"/>
+
